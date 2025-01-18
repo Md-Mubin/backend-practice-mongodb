@@ -24,7 +24,7 @@ const ProfileCompo = () => {
             <section className='profileSection'>
                 <div className="container">
                     <ul className='profileRow'>
-                        <img src="/user_image.png" alt="user_image" className='w-[200px] ' />
+                        <img src="/images/user_image.png" alt="user_image" className='w-[200px] ' />
                         <ul className='userInfoRow'>
                             <li>
                                 <span>

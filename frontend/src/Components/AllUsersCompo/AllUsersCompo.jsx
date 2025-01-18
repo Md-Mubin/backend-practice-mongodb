@@ -31,7 +31,7 @@ const AllUsersCompo = () => {
                 {
                     allUsers.map((items) => (
                         <ul className='allUsersCol' key={items._id}>
-                            <img src="/user_image.png" alt="users_img" />
+                            <img src="/images/user_image.png" alt="users_img" />
                             <ul className='usersInfo'>
                                 <li>
                                     <span>Name:</span>
