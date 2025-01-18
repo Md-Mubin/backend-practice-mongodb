@@ -1,0 +1,52 @@
+.loginSection {
+    @apply pt-48
+}
+
+.loginCol {
+    @apply flex flex-col justify-center items-center
+}
+
+.loginCol h1 {
+    @apply font-brandFont font-semibold italic text-7xl text-[#14a800]
+}
+
+.loginForm {
+    @apply mt-8
+}
+
+.emailLogin, .passwordLogin {
+    @apply w-[400px] my-6 relative 
+}
+
+.emailLogin input, .passwordLogin input {
+    @apply w-full py-3 outline-none border-b-2 border-[#5c8494] bg-transparent text-2xl text-[#9fd4e9] focus-within:border-[#5fbbe6] cursor-pointer tracking-widest
+}
+
+.emailLogin input:hover::placeholder, .passwordLogin input:hover::placeholder{
+    @apply !text-[#5fbbe6]
+}
+
+.loginForm button {
+    @apply px-10 py-3 mt-10 rounded-xl bg-brandColor font-brandFont font-normal text-2xl text-white duration-200
+}
+
+.loginForm button:hover{
+    @apply bg-transparent rounded-xl text-[#fff] translate-y-[-6px]; 
+    box-shadow: 0px 5px 3px #14a800, 0px 6px 2px #000000, 0px 10px 5px #14a800, inset 0px 5px 15px #14a800;
+}
+
+.emailLogin li, .passwordLogin li{
+    @apply text-[#42d62e] absolute top-[-10px] right-0
+}
+
+.passShowLogin{
+    @apply text-3xl !text-[#5c8494] !top-[30%] cursor-pointer
+}
+
+.passShowLogin:hover{
+    @apply !text-[#5fbbe6]
+}
+
+.regPageLink{
+    @apply mt-10 flex justify-center gap-10 font-brandFont font-medium text-xl text-[#fff]
+}

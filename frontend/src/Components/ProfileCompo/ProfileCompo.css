@@ -1,0 +1,23 @@
+.profileSection{
+    @apply mt-4
+}
+
+.profileRow{
+    @apply p-10 bg-[#f0f0f0] rounded-b-2xl flex items-center gap-10 justify-center
+}
+
+.userInfoRow li{
+    @apply w-[500px] m-auto font-brandFont font-semibold text-2xl mt-2 
+}
+
+.userInfoRow li span{
+    @apply w-[130px] inline-block
+}
+
+.profileRow button{
+    @apply px-10 py-3 bg-slate-300 rounded-xl font-brandFont font-medium text-xl duration-300
+}
+
+.profileRow button:hover{
+    @apply bg-red-500 text-white 
+}

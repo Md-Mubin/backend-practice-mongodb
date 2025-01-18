@@ -1,0 +1,40 @@
+.allUserSection{
+    @apply w-full p-4 bg-[#f0f0f0] rounded-br-2xl
+}
+
+.searchInput{
+    @apply w-[350px] mr-5 ml-auto relative
+}
+
+.searchInput input{
+    @apply w-full p-3 rounded-xl outline-none cursor-pointer shadow-[2px_2px_5px_#00000088]
+}
+
+.searchInput button{
+    @apply absolute top-3 right-4 text-2xl text-[#3396c7cc] duration-200
+}
+
+.searchInput button:hover{
+    @apply scale-125 text-[#00aaffcc] drop-shadow-[4px_2px_1px_#00aaffcc]
+}
+
+.allUsersCol{
+    @apply mt-4 p-4 border-2 border-[#94d4f3] rounded-2xl flex items-center gap-10 duration-300
+}
+
+.allUsersCol:hover{
+    @apply bg-[#e2e2e2] 
+}
+
+.allUsersCol img{
+    @apply w-[150px] h-[150px] 
+}
+
+.usersInfo li{
+    @apply font-brandFont font-medium text-2xl flex items-center
+}
+
+.usersInfo li span{
+    @apply w-[100px] font-bold tracking-widest
+}
+

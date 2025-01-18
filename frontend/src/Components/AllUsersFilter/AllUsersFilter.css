@@ -1,0 +1,23 @@
+.allUsersFilterSection{
+    @apply w-[700px] py-4 bg-[#f0f0f0] rounded-bl-2xl
+}
+
+.allUsersFilterSection h1{
+    @apply font-brandFont font-medium text-2xl text-center italic
+}
+
+.advanceSearchCol{
+    @apply mt-6 px-2
+}
+
+.advanceSearchCol li{
+    @apply mt-4 font-brandFont font-medium text-xl flex justify-between items-center
+}
+
+.advanceSearchCol li input{
+    @apply w-[280px] py-1 pl-2 text-lg border-b border-[#0000004d] bg-transparent outline-none
+}
+
+.advanceSearchCol button{
+    @apply px-8 py-2 mt-6 rounded-xl bg-brandColor ml-[70%] font-brandFont font-medium text-xl 
+}

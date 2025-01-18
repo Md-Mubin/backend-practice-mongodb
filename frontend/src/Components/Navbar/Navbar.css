@@ -1,0 +1,23 @@
+nav{
+    @apply pt-20
+}
+
+.navCol{
+    @apply pt-10 px-20 bg-[#f0f0f0] rounded-t-2xl
+}
+
+.navCol h1{
+    @apply font-brandFont font-bold text-5xl text-brandColor text-center
+}
+
+.navItems{
+    @apply mt-10 flex justify-end gap-[2px]
+}
+
+.navItems a, .navItems button{
+    @apply px-8 py-3 rounded-lg bg-[#d4d4d4] flex items-center gap-3 font-brandFont font-semibold text-xl text-[#000] duration-200 will-change-transform
+}
+
+.navItems a:hover, .navItems button:hover{
+    @apply translate-y-[-2px] will-change-transform
+}
