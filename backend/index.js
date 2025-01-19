@@ -1,39 +1,16 @@
 // =========== imports variables
 const express = require("express")
-const mongoose = require("mongoose")
-const schema = mongoose.Schema
+const regUsers = require("./modal/Schema/RegistrationSchema")
 const router = express.Router()
 const cors = require("cors")
+const mongodbDataBase = require("./config/db")
 const app = express()
 
 // =========== all uses of app
 app.use(express.json())
 app.use(cors())
 app.use(router)
-
-// =========== registration schema variables
-const regSchema = new schema({
-    name: String,
-    age: Number,
-    email: {
-        type: String,
-        require: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        require: true
-    }
-})
-
-const regUsers = mongoose.model("Users", regSchema)
-
-// =========== mongodb connect via mongoose npm
-mongoose.connect("mongodb+srv://backendPractice:ex114Vetxe26CENw@mubin.gq4oa.mongodb.net/Users?retryWrites=true&w=majority&appName=mubin")
-    .then(() => {
-        console.log("database connected")
-    })
-
+mongodbDataBase()
 
 // =========== register post
 router.post("/register", async (req, res) => {
