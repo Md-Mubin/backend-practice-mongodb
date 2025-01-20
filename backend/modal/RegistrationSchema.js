@@ -16,4 +16,4 @@ const regSchema = new schema({
     }
 })
 
-module.exports = mongoose.model("Users", regSchema)
+module.exports = mongoose.model("regUsers", regSchema)
