@@ -5,7 +5,7 @@ const myProfileRoute = require("./myProfile")
 const apiRoute = express.Router()
 
 // ======== from login route
-apiRoute.use("/login", loginRoute)
+apiRoute.use("/", loginRoute)
 
 // ======== from register route
 apiRoute.use("/register", registerRoute)

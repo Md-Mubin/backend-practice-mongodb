@@ -25,7 +25,7 @@ const LoginCompo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    await axios.post("http://localhost:4000/login", form)
+    await axios.post("http://localhost:4000", form)
       .then((response) => {
 
         setFormError((prev) => ({ ...prev, emailError: response.data.emailError }))
