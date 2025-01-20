@@ -1,10 +1,9 @@
 const express = require("express")
 const allUserRoute = express.Router()
 const regUsers = require("../../modal/RegistrationSchema")
-app.use(allUserRoute)
 
 // ========== allUsers get
-allUserRoute.get("/myprofile/allUsers", async (req, res) => {
+allUserRoute.get("/",async (req, res) => {
 
     const { _id } = req.query
 

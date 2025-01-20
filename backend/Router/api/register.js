@@ -1,10 +1,9 @@
 const express = require("express")
 const registerRoute = express.Router()
 const regUsers = require("../../modal/RegistrationSchema")
-app.use(registerRoute)
 
 // =========== register post
-registerRoute.post("/register", async (req, res) => {
+registerRoute.post("/", async (req, res) => {
 
     const { name, email, password, age } = req.body
     const errors = {}

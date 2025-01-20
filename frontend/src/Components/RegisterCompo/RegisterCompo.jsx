@@ -17,7 +17,8 @@ const RegisterCompo = () => {
         e.preventDefault()
 
         axios.post("http://localhost:4000/register", form)
-            .then((response) => {
+        .then((response) => {
+                console.log(response)
 
                 if (response.data.regSuccessMsg) {
 

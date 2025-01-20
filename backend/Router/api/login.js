@@ -1,7 +1,6 @@
 const express = require("express")
 const regUsers = require("../../modal/RegistrationSchema")
 const loginRoute = express.Router()
-
 // =========== login post
 loginRoute.post("/", async (req, res) => {
     const { email, password } = req.body
@@ -19,6 +18,7 @@ loginRoute.post("/", async (req, res) => {
     }
 
     const registeredUser = await regUsers.findOne({ email, password })
+    console.log(regUsers)
 
     if (!registeredUser) {
         return res.send({ loginFailedMsg: "Something is Wrong" })
