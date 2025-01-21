@@ -16,7 +16,7 @@ const RegisterCompo = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios.post("http://localhost:4000/register", form)
+        axios.post("http://localhost:4000/auth/register", form)
         .then((response) => {
                 console.log(response)
 

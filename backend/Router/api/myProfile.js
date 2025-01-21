@@ -1,16 +1,12 @@
 const express = require("express")
 const myProfileRoute = express.Router()
-const regUsers = require("../../modal/RegistrationSchema")
-const allUserRoute = require("./allUsers")
+const profileInfo = require("../../controllers/profile/profile")
+const allUsers = require("../../controllers/profile/allUsers")
 
 // =========== myprofile post
-myProfileRoute.post("/", async (req, res) => {
-    const {id} = req.body
-
-    await regUsers.findByIdAndDelete(id)
-})
+myProfileRoute.post("/", profileInfo)
 
 //============ myProfile allusers route
-allUserRoute.get("/allUsers", allUserRoute)
+myProfileRoute.get("/allUsers", allUsers)
 
 module.exports = myProfileRoute;

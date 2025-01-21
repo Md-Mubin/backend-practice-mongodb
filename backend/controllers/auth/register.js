@@ -1,9 +1,6 @@
-const express = require("express")
-const registerRoute = express.Router()
 const regUsers = require("../../modal/RegistrationSchema")
 
-// =========== register post
-registerRoute.post("/", async (req, res) => {
+const authRegister = async (req, res) => {
 
     const { name, email, password, age } = req.body
     const errors = {}
@@ -38,6 +35,6 @@ registerRoute.post("/", async (req, res) => {
     await users.save()
 
     res.send({ regSuccessMsg: "Register Successful" })
-})
+}
 
-module.exports = registerRoute;
+module.exports = authRegister

@@ -1,8 +1,6 @@
-const express = require("express")
 const regUsers = require("../../modal/RegistrationSchema")
-const loginRoute = express.Router()
-// =========== login post
-loginRoute.post("/", async (req, res) => {
+
+const authLogin = async (req, res) => {
     const { email, password } = req.body
     const errors = {}
 
@@ -25,6 +23,6 @@ loginRoute.post("/", async (req, res) => {
     }
 
     res.send({ loginSuccessMsg: "Login Successfull", registeredUser })
-})
+}
 
-module.exports = loginRoute;
+module.exports = authLogin
