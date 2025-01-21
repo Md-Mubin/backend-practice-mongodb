@@ -5,6 +5,7 @@ const authRegister = async (req, res) => {
     const { name, email, password, age } = req.body
     const errors = {}
 
+    // ======== error for empty inputs
     if (!name) {
         errors.nameError = "Name Required"
     }
@@ -22,19 +23,21 @@ const authRegister = async (req, res) => {
         return res.send(errors)
     }
 
+    // ======== if email is alredy reguistered
     const existUser = await regUsers.find({ email })
 
     if (existUser.length > 0) {
         return res.send({ existUserMsg: "Email Already in Use" })
     }
 
+    // ======== if email is new make a new user
     const users = new regUsers({
         name, email, password, age
     })
 
-    await users.save()
+    await users.save() // save the data 
 
-    res.send({ regSuccessMsg: "Register Successful" })
+    res.send({ regSuccessMsg: "Register Successful" }) // send the register successfull massage 
 }
 
 module.exports = authRegister
