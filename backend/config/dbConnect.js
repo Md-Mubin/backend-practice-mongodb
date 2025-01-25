@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 
 const dbConnect= ()=>{
 
-   mongoose.connect("mongodb+srv://backendPractice:ex114Vetxe26CENw@mubin.gq4oa.mongodb.net/Users?retryWrites=true&w=majority&appName=mubin")
+   mongoose.connect("your mongodb database link")
     .then(() => {
         console.log("database connected")
     })
