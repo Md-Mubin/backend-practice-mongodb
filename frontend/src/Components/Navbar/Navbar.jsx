@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux'
 
 const Navbar = () => {
 
+    // ======== getting data from redux
     const loginUserData = useSelector((state) => state.users.value)
 
     // ======== naviagte part
